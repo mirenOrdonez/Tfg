@@ -1,24 +1,35 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
-	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}" defer></script>
-	<!-- Styles -->
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-	<div class="flex-center position-ref full-height">
-		<div class="content">
-			<div class="jumbotron display-1 text-center">
-				IT WORKS!
-			</div>
-			<div class="alert alert-primary" role="alert">
-				This is a primary alert—check it out!																
-			</div>
+@extends('layouts.layoutPrincipal')
+
+@section('titulo', 'Admin')
+
+@section('encabezado')
+    @parent
+@endsection
+
+<br><br>
+
+@section('contenido')
+
+<body class="fondo">
+	<div class="container">
+		<div class="row justify-content-center">
+			<img src="{{ asset('img/logoletra.png') }}">
+		</div>
+		<div class="row justify-content-center">
+			<form>
+				<div class="form-group">
+					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-block btn-info">Log in</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </body>
-</html>
+
+@endsection
+
